@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Dueños de Mascotas</title>
+    <link rel="stylesheet" href="Css/diseño.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Dueños de Mascotas</h1>
+        <form id="owner-form">
+            <div class="form-group">
+                <label for="owner-id">ID del Dueño:</label>
+                <input type="text" id="owner-id" name="owner-id" required>
+            </div>
+            <div class="form-group">
+                <label for="owner-name">Nombre del Dueño:</label>
+                <input type="text" id="owner-name" name="owner-name" required>
+            </div>
+            <div class="form-group">
+                <label for="owner-email">Correo del Dueño:</label>
+                <input type="email"   id="owner-email" name="owner-email" required>
+            </div>
+            <div class="form-group">
+                <label for="owner-phone">Teléfono del Dueño:</label>
+                <input type="tel" id="owner-phone" name="owner-phone" required>
+            </div>
+            <div class="form-group">
+                <label for="pet-count">Cantidad de Mascotas (hasta 3):</label>
+                <select id="pet-count" name="pet-count">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div id="pets-container">
+                <!-- Campos para registrar mascotas (se generarán dinámicamente) -->
+            </div>
+
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Datos Ingresados</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>ID del Dueño</th>
+                    <th>Nombre del Dueño</th>
+                    <th>Correo del Dueño</th>
+                    <th>Teléfono del Dueño</th>
+                    <th>Mascotas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán los datos ingresados -->
+            </tbody>
+        </table>
+        <pre id="json-data"></pre>
+    </div>
+
+    <script src="JS/Javas.js"></script>
+</body>
+</html>
